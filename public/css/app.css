@@ -10002,3 +10002,6 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.mh-300px {
+  max-height: 300px;
+}

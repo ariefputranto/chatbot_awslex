@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/user', [App\Http\Controllers\HomeController::class, 'user'])->name('home');
+Route::resource('messages', App\Http\Controllers\MessageController::class)->only([
+	'index',
+	'store'
+]);

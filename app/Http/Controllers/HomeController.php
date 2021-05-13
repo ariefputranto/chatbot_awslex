@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,19 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    /**
+     * get current user.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function user()
+    {
+        return collect([
+            'status' => 'success',
+            'message' => '',
+            'data' => Auth::user()->only('id', 'name')
+        ]);
     }
 }
