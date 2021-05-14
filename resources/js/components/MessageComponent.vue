@@ -9,7 +9,7 @@
                         <div class="mh-300px overflow-auto" id="chat-container">
                             <div class="clearfix m" v-for="message in messages">
                                 <span v-if="message.from_user !== null">{{ message.from_user.name }}: {{ message.message }}</span>
-                                <span v-if="message.to_user !== null">{{ message.to_user.name }}: {{ message.message }}</span>
+                                <span v-else>BookTripExample: {{ message.message }}</span>
                             </div>
                         </div>
 

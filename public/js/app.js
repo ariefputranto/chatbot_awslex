@@ -40273,17 +40273,9 @@ var render = function() {
                             _vm._s(message.message)
                         )
                       ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  message.to_user !== null
-                    ? _c("span", [
-                        _vm._v(
-                          _vm._s(message.to_user.name) +
-                            ": " +
-                            _vm._s(message.message)
-                        )
+                    : _c("span", [
+                        _vm._v("BookTripExample: " + _vm._s(message.message))
                       ])
-                    : _vm._e()
                 ])
               }),
               0
